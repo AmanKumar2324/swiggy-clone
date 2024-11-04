@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Apply a sans-serif font globally */
+body {
+    font-family: Arial, 'Helvetica Neue', sans-serif;
+  }
+  
