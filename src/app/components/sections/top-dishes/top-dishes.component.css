@@ -1,0 +1,37 @@
+.top-dishes {
+    padding-top: 40px;
+    text-align: left;
+    margin: 20px 0;
+  }
+  
+  .top-dishes h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 120px;
+    font-weight: bold;
+    font-family: 'Proxima Nova', Arial, 'Helvetica Neue', sans-serif;
+  }
+  
+  .dishes-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .dishes-container:hover{
+    cursor: pointer;
+  }
+  
+  .dish-card {
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dish-card img {
+    width: 150px; /* Adjust based on your design */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+  }
+  

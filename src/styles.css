@@ -1,7 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Apply a sans-serif font globally */
-body {
-    font-family: Arial, 'Helvetica Neue', sans-serif;
-  }
   
+  /* Global styles */
+body {
+  margin: 0; /* Remove default body margin */
+  box-sizing: border-box; /* Ensure padding is included in width calculations */
+  font-family: Arial, 'Helvetica Neue', sans-serif;
+}
+
+/* Optional: Apply padding to main content area */
+main {
+  /* padding-left: 10px; */
+  /* padding-right: 20px; */
+}
+
+/* Ensure all elements use border-box sizing */
+*, *::before, *::after {
+  box-sizing: inherit; /* Inherit box-sizing from body */
+}
