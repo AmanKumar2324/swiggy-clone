@@ -1,0 +1,135 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Proxima Nova', Arial, 'Helvetica Neue', sans-serif;
+}
+
+/* Container Styles */
+/* .top-restaurant-container {
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto; */
+  /* background-color: red; */
+/* } */
+
+.section-heading {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 120px;
+    font-weight: 600;
+    font-family: 'Proxima Nova', Arial, 'Helvetica Neue', sans-serif;
+}
+
+/* Restaurant Card Styles */
+.restaurant-card {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 280px; /* Fixed height for the card */
+  width: 400px;  /* Fixed width for the card */
+  margin-bottom: 30px;
+}
+.restaurant-card:hover{
+  cursor: pointer;
+}
+
+/* Image Section */
+.restaurant-card-image {
+  position: relative;
+  height: 60%; /* Occupying 70% of the card height */
+  width: 100%;
+  overflow: hidden;
+}
+
+.restaurant-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+}
+
+.offer-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Restaurant Details Section */
+.restaurant-card-details {
+  padding: 10px;
+  height: 30%; /* Occupying 30% of the card height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.restaurant-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.rating {
+  font-size: 1rem;
+  color: #f39c12;
+  margin-bottom: 5px;
+}
+
+.dishes {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.address {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-restaurant-container {
+    padding: 20px;
+  }
+
+  .restaurant-card {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 350px;
+  }
+
+  .restaurant-card-details {
+    height: 30%; /* Ensure details are still 30% */
+    text-align: center;
+  }
+
+  .offer-text {
+    font-size: 0.8rem;
+    bottom: 5px;
+    left: 5px;
+  }
+}
+
+.restraunt-chain{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 120px;
+  padding-right: 120px;
+}

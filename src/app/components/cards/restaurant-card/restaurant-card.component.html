@@ -1,1 +1,13 @@
-<p>restaurant-card works!</p>
+<div class="restaurant-card">
+    <div class="image-container">
+      <img [src]="imageUrl" alt="{{ restaurantName }}" />
+      <div class="offer">{{ offerText }}</div>
+    </div>
+    <div class="details">
+      <h3>{{ restaurantName }}</h3>
+      <p class="ratings">Rating: {{ ratings}} / 5</p>
+      <p class="dishes">Dishes: {{ dishes.join(', ') }}</p>
+      <p class="address">{{ address }}</p>
+    </div>
+  </div>
+  
