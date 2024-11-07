@@ -8,11 +8,13 @@ import { BestPlacesComponent } from "./components/sections/best-places/best-plac
 import { CuisinesComponent } from "./components/sections/cuisines/cuisines.component";
 import { EveryRestrauntComponent } from "./components/sections/every-restraunt/every-restraunt.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { RestaurantMenuComponent } from "./pages/restaurant-menu/restaurant-menu.component";
+import { HomeComponent } from "./pages/home/home.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, TopDishesComponent, TopRestaurantsComponent, ExploreRestaurantsComponent, BestPlacesComponent, CuisinesComponent, EveryRestrauntComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, TopDishesComponent, TopRestaurantsComponent, ExploreRestaurantsComponent, BestPlacesComponent, CuisinesComponent, EveryRestrauntComponent, FooterComponent, RestaurantMenuComponent, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

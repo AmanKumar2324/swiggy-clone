@@ -1,3 +1,4 @@
+// src/app/components/sections/top-restaurants/top-restaurants.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,23 +8,26 @@ import { Component } from '@angular/core';
   standalone: true
 })
 export class TopRestaurantsComponent {
+  // Sample restaurant data
   restaurants = [
     {
-      name: 'Restaurant 1',
-      image: 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/17/66be26d6-e3cf-43ad-acb9-dbeb9eded49d_152420.jpg', // Replace with actual image paths
-      offer: '50% off on first order',
+      id: 1,
+      name: 'KFC',
       rating: 4.5,
-      dishes: ['Pizza', 'Pasta', 'Salad'],
-      address: '123 Main St, City'
+      reviews: 150,
+      dishes: ['Pasta', 'Pizza', 'Burgers'],
+      address: 'Post office city center',
+      image: 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/37dc9e37-386f-453b-a219-ffa2c154750b_355919.JPG'
     },
     {
-      name: 'Restaurant 2',
-      image: 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/37dc9e37-386f-453b-a219-ffa2c154750b_355919.JPG',
-      offer: 'Free dessert with every meal',
-      rating: 4.0,
-      dishes: ['Burger', 'Fries'],
-      address: '456 Elm St, City'
+      id: 2,
+      name: 'Dominos',
+      rating: 4.3,
+      reviews: 200,
+      dishes: ['Pizza', 'Garlic Bread', 'Pasta'],
+      address: 'Main street, downtown',
+      image: 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/37dc9e37-386f-453b-a219-ffa2c154750b_355919.JPG'
     },
-    // Add more restaurant objects as needed
+    // More restaurant objects can go here
   ];
 }
