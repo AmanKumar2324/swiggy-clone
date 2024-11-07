@@ -1,5 +1,5 @@
 .best-places-container {
-    background-color: #f4f4f9;
+    background-color: white;
     padding: 20px 0; /* Add padding to the top and bottom of the container */
 }
 
@@ -42,4 +42,6 @@
     color: rgb(112, 111, 111);
     margin: 3px 5px; /* Control top/bottom and left/right margin of card text */
 }
-
+.spacer{
+    height: 10vw;
+}
