@@ -4,6 +4,7 @@ import { HeaderComponent } from "../../components/header/header.component";
 import { FooterComponent } from "../../components/footer/footer.component";
 import { filter } from 'rxjs';
 import { CommonModule } from '@angular/common';  // Import CommonModule
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-restaurant-menu',
@@ -65,7 +66,7 @@ export class RestaurantMenuComponent implements OnInit {
     }
   ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private cartService: CartService) {}
 
   ngOnInit() {
     // Listen for route changes and scroll to top on NavigationEnd
@@ -78,18 +79,28 @@ export class RestaurantMenuComponent implements OnInit {
 
   // Add dish to cart (sets quantity to 1 if it's 0)
   addToCart(index: number) {
-    this.dishes[index].quantity = 1;
+    const dish = this.dishes[index];
+    if (dish.quantity === 0) {
+      dish.quantity = 1;  // Set the quantity to 1 when "ADD" is pressed for the first time
+    } else {
+      dish.quantity++;  // Increase quantity if the dish is already added
+    }
+    this.cartService.addToCart(dish);
   }
 
   // Increase the quantity of a dish
   increaseQuantity(index: number) {
-    this.dishes[index].quantity += 1;
+    const dish = this.dishes[index];
+    dish.quantity++;
+    this.cartService.updateQuantity(dish, dish.quantity); 
   }
 
   // Decrease the quantity of a dish, with a minimum of 0
   decreaseQuantity(index: number) {
-    if (this.dishes[index].quantity > 0) {
-      this.dishes[index].quantity -= 1;
+    const dish = this.dishes[index];
+    if (dish.quantity > 0) {
+      dish.quantity--;
+      this.cartService.updateQuantity(dish, dish.quantity); // Update quantity in the cart
     }
   }
 }

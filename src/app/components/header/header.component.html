@@ -54,7 +54,7 @@
 
           <div *ngFor="let item of cartItems" class="cart-tile">
             <span class="cart-item-name">{{ item.name }}</span>
-            <span class="cart-item-price">₹{{ item.price }}</span>
+            <span class="cart-item-price">₹{{ item.price }} x {{ item.quantity }}</span>
           </div>
 
           <div class="cart-tile subtotal">
