@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-top-dishes',
   templateUrl: './top-dishes.component.html',
   styleUrls: ['./top-dishes.component.css'],
+  imports: [RouterLink],
   standalone: true
 })
 export class TopDishesComponent {

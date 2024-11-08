@@ -1,10 +1,12 @@
 // src/app/components/sections/top-restaurants/top-restaurants.component.ts
 import { Component } from '@angular/core';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-top-restaurants',
   templateUrl: './top-restaurants.component.html',
   styleUrls: ['./top-restaurants.component.css'],
+  imports: [RouterLink],
   standalone: true
 })
 export class TopRestaurantsComponent {

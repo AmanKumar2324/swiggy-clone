@@ -3,13 +3,13 @@ import { Router, NavigationEnd } from '@angular/router';
 import { HeaderComponent } from "../../components/header/header.component";
 import { FooterComponent } from "../../components/footer/footer.component";
 import { filter } from 'rxjs';
-import { CommonModule } from '@angular/common';  // Import CommonModule
+import { CommonModule } from '@angular/common';
 import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-restaurant-menu',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, CommonModule],  // Add CommonModule here
+  imports: [HeaderComponent, FooterComponent, CommonModule],
   templateUrl: './restaurant-menu.component.html',
   styleUrls: ['./restaurant-menu.component.css']
 })
@@ -80,8 +80,9 @@ export class RestaurantMenuComponent implements OnInit {
   // Add dish to cart (sets quantity to 1 if it's 0)
   addToCart(index: number) {
     const dish = this.dishes[index];
+    // Set the quantity to 1 when "ADD" is pressed for the first time
     if (dish.quantity === 0) {
-      dish.quantity = 1;  // Set the quantity to 1 when "ADD" is pressed for the first time
+      dish.quantity = 1;
     } else {
       dish.quantity++;  // Increase quantity if the dish is already added
     }

@@ -135,7 +135,7 @@
   font-family: 'Proxima Nova', Arial, 'Helvetica Neue', sans-serif;
 }
 
-/* Show cart dropdown when hovering over the cart button */
+/* Showing cart dropdown when hovering over the cart button */
 .cart-container:hover .cart-dropdown,
 .cart-dropdown:hover {
   display: block;

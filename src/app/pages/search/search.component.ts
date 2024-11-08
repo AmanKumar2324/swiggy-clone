@@ -8,7 +8,7 @@ import { TopDishesComponent } from "../../components/sections/top-dishes/top-dis
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [CommonModule, FormsModule, HeaderComponent, CuisinesComponent, TopDishesComponent],
+  imports: [CommonModule, FormsModule, HeaderComponent, TopDishesComponent],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })

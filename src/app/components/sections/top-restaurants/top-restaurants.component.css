@@ -38,8 +38,8 @@ body {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 280px; /* Fixed height for the card */
-  width: 400px;  /* Fixed width for the card */
+  height: 280px;
+  width: 400px;
   margin-bottom: 30px;
 }
 .restaurant-card:hover{
@@ -49,7 +49,7 @@ body {
 /* Image Section */
 .restaurant-card-image {
   position: relative;
-  height: 60%; /* Occupying 70% of the card height */
+  height: 60%;
   width: 100%;
   overflow: hidden;
 }
@@ -57,7 +57,7 @@ body {
 .restaurant-card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+  object-fit: cover;
 }
 
 .offer-text {
@@ -74,7 +74,7 @@ body {
 /* Restaurant Details Section */
 .restaurant-card-details {
   padding: 10px;
-  height: 30%; /* Occupying 30% of the card height */
+  height: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -110,12 +110,12 @@ body {
   }
 
   .restaurant-card {
-    width: 100%; /* Full width on smaller screens */
+    width: 100%;
     max-width: 350px;
   }
 
   .restaurant-card-details {
-    height: 30%; /* Ensure details are still 30% */
+    height: 30%;
     text-align: center;
   }
 
