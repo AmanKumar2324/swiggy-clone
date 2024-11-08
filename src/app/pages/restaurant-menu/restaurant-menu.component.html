@@ -1,92 +1,33 @@
 <app-header></app-header>
-
 <div class="restaurant-menu-container">
   <h3>View Dishes</h3>
-    <div class="card">
-        <div class="card-leading">
-          <h3>Korean Pizza</h3>
-          <p>₹225</p>
-          <p>20% off on this order</p>
-          <p>Hot and spics filled with cheese</p>
-        </div>
-        <div class="card-trailing">
-          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/7/19/4c4e85fc-9a85-41b7-a9d6-644b92c144da_a8391eb4-db4c-41cc-b7d5-02114443fc5c.jpg" alt="Dish Image">
-          <button>ADD</button>
-        </div>
-      </div>
-
-      <!-- Second card  -->
-      <div class="card">
-        <div class="card-leading">
-          <h3>Indian Tandoori Roll Chicken</h3>
-          <p>₹399</p>
-          <p>20% off on this order</p>
-          <p>Save Rs. 75 on Indian Tandoori Roll, Classic Zinger Burger, Medium Fries & Pepsi PET 475ml</p>
-        </div>
-        <div class="card-trailing">
-          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/7/19/5d439a47-5bce-4010-b1b1-bc2f8344367b_8ed35bd6-33f3-419e-a5ee-62efb83a6a45.jpg" alt="Dish Image">
-          <button>ADD</button>
-        </div>
-      </div>
-
-      <!-- Third card  -->
-      <div class="card">
-        <div class="card-leading">
-          <h3>Thai Spicy Roll & Zinger Chicken Meal</h3>
-          <p>₹399</p>
-          <p>20% off on this order</p>
-          <p>Save Rs. 75 with Thai Spicy Roll with Classic Zinger Burger, Medium Fries and Pepsi PET 475ml</p>
-        </div>
-        <div class="card-trailing">
-          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/7/19/5d439a47-5bce-4010-b1b1-bc2f8344367b_8ed35bd6-33f3-419e-a5ee-62efb83a6a45.jpg" alt="Dish Image">
-          <button>ADD</button>
-        </div>
-      </div>
-
-      <!-- Fourth card  -->
-
-      <div class="card">
-        <div class="card-leading">
-          <h3>Classic Chicken Roll Meal</h3>
-          <p>₹479</p>
-          <p>20% off on this order</p>
-          <p>Deal combo of 2 Classic Chicken Rolls, Large Fries, 2 Dips & Pepsi 475ml</p>
-        </div>
-        <div class="card-trailing">
-          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/5/10/183cb04b-d716-443a-91d9-27f26c566adc_e3c2c7c7-b9a8-4881-a4b5-05532b10ec0a.jpg" alt="Dish Image">
-          <button>ADD</button>
-        </div>
-      </div>
-
-      <!-- Fifth card  -->
-
-      <div class="card">
-        <div class="card-leading">
-          <h3>French Fries - Medium</h3>
-          <p>₹99.09</p>
-          <p>20% off on this order</p>
-          <p>Medium Size Fries</p>
-        </div>
-        <div class="card-trailing">
-          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/n4ry9mep4uisjri10uqp" alt="Dish Image">
-          <button>ADD</button>
-        </div>
-      </div>
-
-      <!-- Sixth Card  -->
-      <div class="card">
-        <div class="card-leading">
-          <h3>Pack of 4 dips</h3>
-          <p>₹125</p>
-          <p>20% off on this order</p>
-          <p>Adding dips is always a good idea!</p>
-        </div>
-        <div class="card-trailing">
-          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/gvtc5ybblsammx3nemfo" alt="Dish Image">
-          <button>ADD</button>
-        </div>
-      </div>
-      <div class="spacer"></div>
-      <app-footer></app-footer>
-</div>
   
+  <div class="card" *ngFor="let dish of dishes; let i = index">
+    <div class="card-leading">
+      <h3>{{ dish.name }}</h3>
+      <p>₹{{ dish.price }}</p>
+      <p>{{ dish.discount }}</p>
+      <p>{{ dish.description }}</p>
+    </div>
+    <div class="card-trailing">
+      <img [src]="dish.image" alt="Dish Image">
+      
+      <!-- Display "ADD" button if quantity is 0 -->
+      <div *ngIf="dish.quantity === 0; else quantityControl">
+        <button class="add-button" (click)="addToCart(i)">ADD</button>
+      </div>
+      
+      <!-- Display quantity control if quantity is greater than 0 -->
+      <ng-template #quantityControl>
+        <div class="quantity-container">
+          <button class="quantity-button" (click)="decreaseQuantity(i)">-</button>
+          <span class="quantity-number">{{ dish.quantity }}</span>
+          <button class="quantity-button" (click)="increaseQuantity(i)">+</button>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+  <app-footer></app-footer>
+</div>
