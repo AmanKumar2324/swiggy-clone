@@ -57,6 +57,12 @@ import { CommonModule } from '@angular/common';
   standalone: true
 })
 export class HeaderComponent implements OnInit {
+  selectedAddress: string = 'Other'; // Default value
+
+  selectAddress(address: string, event: MouseEvent): void {
+    event.preventDefault(); // Prevent the default anchor tag behavior
+    this.selectedAddress = address; // Update the selected address
+  }
   cartItems: any[] = []; // Holds the cart items
   isCartDropdownVisible: boolean = false; // Flag for dropdown visibility
   totalAmount: number = 0; // Total amount for the cart

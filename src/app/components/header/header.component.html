@@ -5,15 +5,17 @@
   <div class="nav-buttons">
     <div class="dropdown">
       <button class="dropdown-btn">
-        <span class="dropdown-text">Other</span>
+        <span class="dropdown-text">{{ selectedAddress }}</span>
         <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
       </button>
       <div class="dropdown-content">
-        <a href="#">Sarai, Bhagalpur</a>
-        <a href="#">Sri Rameshwaram Extension, Bhagalpur</a>
-        <a href="#">Mayur Vihar, Delhi</a>
+        <a href="#" (click)="selectAddress('Sarai, Bhagalpur', $event)">Sarai, Bhagalpur</a>
+        <a href="#" (click)="selectAddress('Sri Rameshwaram, Bhagalpur', $event)">Sri Rameshwaram, Bhagalpur</a>
+        <a href="#" (click)="selectAddress('Mayur Vihar, Delhi', $event)">Mayur Vihar, Delhi</a>
       </div>
     </div>
+    
+    
     <button class="nav-btn">
       <img src="assets/corporate_logo.jpg" alt="Swiggy Corporate Icon" class="nav-icon" />
       Swiggy Corporate
