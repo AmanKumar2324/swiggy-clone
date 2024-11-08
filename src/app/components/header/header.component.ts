@@ -48,12 +48,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service'; // Make sure CartService is imported
 import { CommonModule } from '@angular/common';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  imports:[CommonModule],
+  imports:[CommonModule, RouterLink],
   standalone: true
 })
 export class HeaderComponent implements OnInit {

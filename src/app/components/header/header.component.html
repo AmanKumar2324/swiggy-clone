@@ -20,10 +20,12 @@
       <img src="assets/corporate_logo.jpg" alt="Swiggy Corporate Icon" class="nav-icon" />
       Swiggy Corporate
     </button>
-    <button class="nav-btn">
-      <img src="assets/search_logo.jpg" alt="Search Icon" class="nav-icon" />
-      Search
-    </button>
+    <div [routerLink]="['/search']">
+      <button class="nav-btn" >
+        <img src="assets/search_logo.jpg" alt="Search Icon" class="nav-icon" />
+        Search
+      </button>
+    </div>
     <button class="nav-btn">
       <img src="assets/offer_logo.jpg" alt="Offers Icon" class="nav-icon" />
       Offers

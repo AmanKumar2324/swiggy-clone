@@ -1,0 +1,20 @@
+<app-header></app-header>
+
+<div class="search-page">
+    <div class="search-container">
+        <div class="search-box">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search for restaurant and food"
+            [(ngModel)]="searchQuery" />
+          <button class="search-button" (click)="onSearch()">
+            <i class="fa fa-search"></i> <!-- Search icon from FontAwesome -->
+          </button>
+        </div>
+      </div>
+    <div class="search-top-dishes">
+        <app-top-dishes></app-top-dishes>
+    </div>
+</div>
+  

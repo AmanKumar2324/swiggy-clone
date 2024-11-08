@@ -1,0 +1,53 @@
+/* The main container of the search bar */
+.search-container {
+    margin-top: 15vh;
+    box-sizing: border-box;
+    margin-left: 12vw;
+    margin-right: 12vw;
+  }
+  .search-page{
+    /* margin-left: 14vw;
+    padding-right: 6vw; */
+    margin-top: 15vh;
+
+  }
+  /* The search box containing the input and button */
+  .search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc; /* Border around the search box */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Input field styling */
+  .search-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 25px; /* Rounded corners for the input */
+  }
+  
+  /* Styling the search button */
+  .search-button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: grey;
+    font-size: 18px;
+  }
+  
+  .search-button i {
+    font-size: 18px;
+  }
+  
+  /* Optional: Placeholder text color */
+  .search-input::placeholder {
+    color: #888;
+  }
